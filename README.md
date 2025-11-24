@@ -1,4 +1,3 @@
-
 # worker-comfyui
 
 > [ComfyUI](https://github.com/comfyanonymous/ComfyUI) as a serverless API on [RunPod](https://www.runpod.io/)
@@ -7,7 +6,7 @@
   <img src="assets/worker_sitting_in_comfy_chair.jpg" title="Worker sitting in comfy chair" />
 </p>
 
-[![Runpod](https://api.runpod.io/badge/RahulMalireddy/worker-comfyui-wan22-remix)](https://console.runpod.io/hub/RahulMalireddy/worker-comfyui-wan22-remix)
+[![Runpod](https://api.runpod.io/badge/RahulMalireddy/kxbwon3nf3wsqj)](https://console.runpod.io/serverless/user/endpoint/kxbwon3nf3wsqj)
 
 ---
 
