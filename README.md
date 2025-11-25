@@ -6,7 +6,7 @@
   <img src="assets/worker_sitting_in_comfy_chair.jpg" title="Worker sitting in comfy chair" />
 </p>
 
-[![Runpod](https://api.runpod.io/badge/RahulMalireddy/kxbwon3nf3wsqj)](https://console.runpod.io/serverless/user/endpoint/kxbwon3nf3wsqj)
+[![Runpod](https://api.runpod.io/badge/RahulMalireddy/worker-comfyui-wan22-remix)](https://console.runpod.io/hub/RahulMalireddy/worker-comfyui-wan22-remix)
 
 ---
 

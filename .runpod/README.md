@@ -6,8 +6,7 @@ Run [ComfyUI](https://github.com/comfyanonymous/ComfyUI) workflows as a serverle
 
 ---
 
-[![RunPod](https://api.runpod.io/badge/runpod-workers/worker-comfyui)](https://www.runpod.io/console/hub/runpod-workers/worker-comfyui)
-
+[![Runpod](https://api.runpod.io/badge/RahulMalireddy/worker-comfyui-wan22-remix)](https://console.runpod.io/hub/RahulMalireddy/worker-comfyui-wan22-remix)
 ---
 
 ## What is included?
