@@ -153,6 +153,7 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       git clone https://github.com/Fannovel16/ComfyUI-Frame-Interpolation custom_nodes/ComfyUI-Frame-Interpolation;\
       source .venv/bin/activate;\
       python install.py;\
+      deactivate;\
     fi
 
 # Stage 3: Final image
