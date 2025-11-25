@@ -143,9 +143,10 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU; \
       git clone https://github.com/openai/triton custom_nodes/triton; \
       cd custom_nodes/triton;\
-      pip3 install -r python/requirements.txt; \
+      pip install -r python/requirements.txt; \
       pip install -e .; \
       cd.. custom_nodes/triton;\
+      pip install sage-attention;\
     fi
 
 # Stage 3: Final image
