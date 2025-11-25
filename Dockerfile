@@ -147,6 +147,10 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       pip install -e .; \
       cd.. custom_nodes/triton;\
       pip install sage-attention;\
+      git clone https://github.com/your-username/ComfyUI-VFI.git custom_nodes/ComfyUI-VFI;\
+      cd ComfyUI-VFI;\
+      pip install -r requirements.txt;\
+
     fi
 
 # Stage 3: Final image
