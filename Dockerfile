@@ -141,8 +141,11 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       wget -q -O models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Wan22-Lightning/old/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors && \
       wget -q -O models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Wan22-Lightning/old/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors && \
       git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU; \
-      git clone https://github.com/wallen0322/ComfyUI-SageAttention3 custom_nodes/ComfyUI-SageAttention3; \
-      pip install sageattn3; \
+      git clone https://github.com/openai/triton custom_nodes/triton; \
+      cd custom_nodes/triton;\
+      pip3 install -r python/requirements.txt; \
+      pip install -e .; \
+      cd.. custom_nodes/triton;\
     fi
 
 # Stage 3: Final image
