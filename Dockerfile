@@ -151,7 +151,7 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       wget -q -O models/vae/sdxl_vae.safetensors https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors && \
       wget -q -O models/vae/sdxl-vae-fp16-fix.safetensors https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors && \
       wget -q -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors && \
-      wget -q -O pip install -r custom_nodes\ComfyUI-MultiGPU\requirements.txt; \
+      wget -q -O pip install -r custom_nodes/ComfyUI-MultiGPU/requirements.txt; \
     fi
       # git clone https://github.com/openai/triton custom_nodes/triton; \
       # cd custom_nodes/triton;\
