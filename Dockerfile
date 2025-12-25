@@ -96,7 +96,7 @@ FROM base AS downloader
 
 ARG HUGGINGFACE_ACCESS_TOKEN
 # Set default model type if none is provided
-ARG MODEL_TYPE=flux1-dev-fp8
+ARG MODEL_TYPE=wan22-remix
 
 # Change working directory to ComfyUI
 WORKDIR /comfyui
@@ -141,19 +141,19 @@ RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       wget -q -O models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Wan22-Lightning/old/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors && \
       wget -q -O models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Wan22-Lightning/old/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors && \
       git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU; \
-      git clone https://github.com/openai/triton custom_nodes/triton; \
-      cd custom_nodes/triton;\
-      pip install -r python/requirements.txt; \
-      pip install -e .; \
-      cd.. custom_nodes/triton;\
-      pip install sage-attention;\
-      git clone https://github.com/your-username/ComfyUI-VFI.git custom_nodes/ComfyUI-VFI;\
-      cd ComfyUI-VFI;\
-      pip install -r requirements.txt;\
-      git clone https://github.com/Fannovel16/ComfyUI-Frame-Interpolation custom_nodes/ComfyUI-Frame-Interpolation;\
-      source .venv/bin/activate;\
-      python install.py;\
-      deactivate;\
+      # git clone https://github.com/openai/triton custom_nodes/triton; \
+      # cd custom_nodes/triton;\
+      # pip install -r python/requirements.txt; \
+      # pip install -e .; \
+      # cd.. custom_nodes/triton;\
+      # pip install sage-attention;\
+      # git clone https://github.com/your-username/ComfyUI-VFI.git custom_nodes/ComfyUI-VFI;\
+      # cd ComfyUI-VFI;\
+      # pip install -r requirements.txt;\
+      # git clone https://github.com/Fannovel16/ComfyUI-Frame-Interpolation custom_nodes/ComfyUI-Frame-Interpolation;\
+      # source .venv/bin/activate;\
+      # python install.py;\
+      # deactivate;\
     fi
 
 # Stage 3: Final image
