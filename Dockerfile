@@ -139,12 +139,15 @@ RUN if [ "$MODEL_TYPE" = "flux1-dev-fp8" ]; then \
     fi
 
 #Install MULTIGPU
-RUN git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU
-RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git custom_nodes/ComfyUI-Custom-Scripts
-WORKDIR /comfyui/custom_nodes/ComfyUI-MultiGPU
-RUN ls
-RUN pip install -r /requirements.txt
-WORKDIR /comfyui
+RUN comfy install --url https://github.com/pollockjj/ComfyUI-MultiGPU
+RUN comfy install --url https://github.com/pythongosssss/ComfyUI-Custom-Scripts
+#RUN git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU
+#RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git custom_nodes/ComfyUI-Custom-Scripts
+#WORKDIR /comfyui/custom_nodes/ComfyUI-MultiGPU
+#RUN ls
+#RUN pip install -r /requirements.txt
+#WORKDIR /comfyui
+
 
 
 RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
