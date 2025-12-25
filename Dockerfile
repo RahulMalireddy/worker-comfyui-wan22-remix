@@ -138,10 +138,13 @@ RUN if [ "$MODEL_TYPE" = "flux1-dev-fp8" ]; then \
       wget -q -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors; \
     fi
 
+#Install MULTIGPU
 RUN git clone https://github.com/pollockjj/ComfyUI-MultiGPU.git custom_nodes/ComfyUI-MultiGPU
 RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git custom_nodes/ComfyUI-Custom-Scripts
 WORKDIR /comfyui/custom_nodes/ComfyUI-MultiGPU
 RUN uv pip install -r requirements.txt
+WORKDIR /comfyui
+
 
 RUN if [ "$MODEL_TYPE" = "wan22-remix" ]; then \
       wget -q -O models/diffusion_models/Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors https://huggingface.co/FX-FeiHou/wan2.2-Remix/resolve/main/NSFW/Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors && \
